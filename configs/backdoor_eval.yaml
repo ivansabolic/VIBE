@@ -1,0 +1,16 @@
+defaults:
+  - dataset: cifar10
+  - dataloader: standard
+  - backdoor: badnets
+  - model: resnet18_vmf
+  - hooks: standard
+  - training: sgd_none
+  - _self_
+
+trainer: backdoor
+
+experiments_root: experiments
+add_info: ""
+cache_dir: cache
+
+model_path: ""

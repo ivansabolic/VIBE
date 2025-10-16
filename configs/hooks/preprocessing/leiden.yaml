@@ -1,0 +1,6 @@
+- name: leiden
+  delta: 0.275
+  num_neighbors: 50
+  start: 0.1
+  end: 3
+  steps: 50

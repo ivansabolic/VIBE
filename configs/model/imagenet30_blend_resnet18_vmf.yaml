@@ -1,0 +1,6 @@
+defaults:
+  - resnet18_vmf
+  - _self_
+
+backbone:
+  ckpt_path: "solo_models/all4one/avkcr6qp/all4one-imagenet30-poisoned_blended_0.1_0-avkcr6qp-ep=399.ckpt"

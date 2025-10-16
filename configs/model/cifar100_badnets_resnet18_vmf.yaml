@@ -1,0 +1,6 @@
+defaults:
+  - resnet18_vmf
+  - _self_
+
+backbone:
+  ckpt_path: "solo_models/all4one/rd2w8vd1/All4One-cifar100_badnets_0.1_0-rd2w8vd1-ep=999.ckpt"

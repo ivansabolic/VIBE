@@ -1,0 +1,5 @@
+name: imagenet-30
+cifar: False
+
+kappa: 10
+nu: 10

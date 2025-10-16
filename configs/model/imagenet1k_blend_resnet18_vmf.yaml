@@ -1,0 +1,6 @@
+defaults:
+  - resnet18_vmf
+  - _self_
+
+backbone:
+  ckpt_path: ""

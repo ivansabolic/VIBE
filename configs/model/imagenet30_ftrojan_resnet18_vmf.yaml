@@ -1,0 +1,6 @@
+defaults:
+  - resnet18_vmf
+  - _self_
+
+backbone:
+  ckpt_path: "solo_models/all4one/36ja67g1/all4one-imagenet30-poisoned_ftrojan_0.1_0-36ja67g1-ep=399.ckpt"

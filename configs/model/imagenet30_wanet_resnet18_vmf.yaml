@@ -1,0 +1,6 @@
+defaults:
+  - resnet18_vmf
+  - _self_
+
+backbone:
+  ckpt_path: "solo_models/all4one/ot3lxeh8/all4one-imagenet30-poisoned_wanet_0.1_0-ot3lxeh8-ep=399.ckpt"

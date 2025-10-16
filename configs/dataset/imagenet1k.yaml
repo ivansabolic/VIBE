@@ -1,0 +1,5 @@
+name: imagenet1k
+cifar: False
+
+kappa: 20
+nu: 20

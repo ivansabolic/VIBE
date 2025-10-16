@@ -1,0 +1,6 @@
+defaults:
+  - resnet18_vmf
+  - _self_
+
+backbone:
+  ckpt_path: "solo_models/all4one/j2p1ohx8/All4One-cifar10_cbd_patch_0.02_0-j2p1ohx8-ep=999.ckpt"

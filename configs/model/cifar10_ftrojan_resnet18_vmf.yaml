@@ -1,0 +1,6 @@
+defaults:
+  - resnet18_vmf
+  - _self_
+
+backbone:
+  ckpt_path: "solo_models/all4one/6w30cnrh/All4One-cifar10-poisoned_ftrojan_0.1_0-6w30cnrh-ep=999.ckpt"

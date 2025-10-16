@@ -1,0 +1,5 @@
+name: cifar-10
+cifar: True
+
+kappa: 10
+nu: 10

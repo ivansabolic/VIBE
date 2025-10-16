@@ -1,0 +1,6 @@
+defaults:
+  - resnet18_vmf
+  - _self_
+
+backbone:
+  ckpt_path: "solo_models/all4one/ahs1x0h6/All4One-cifar100_ftrojan_0.1_0-ahs1x0h6-ep=999.ckpt"

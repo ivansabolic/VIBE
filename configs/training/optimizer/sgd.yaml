@@ -1,0 +1,7 @@
+name: sgd
+lr: 0.001
+momentum: 0.9
+weight_decay: 0.0005
+optimize_prior: True
+mu_z_lr: null
+mu_y_lr: null

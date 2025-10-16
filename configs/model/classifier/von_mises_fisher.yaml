@@ -1,0 +1,7 @@
+name: von_mises_fisher
+kappa: 10
+nu: 10
+mu_z_init: original_centroids
+freeze_mu_z: False
+mu_y_init: original_centroids
+freeze_mu_y: False
