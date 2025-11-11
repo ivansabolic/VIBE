@@ -135,6 +135,7 @@ def create_or_load_poisoned_set(dataset_labels: Tensor, dataset_length: int, tar
             mask = ~mask
         poisoning_idxs = poisoning_idxs[mask]
 
+    dataset_length = dataset_length if not clean_label else poisoning_idxs.size(0)
     poisoning_idxs = poisoning_idxs[:int(poisoning_rate * dataset_length)]
 
     torch.save(poisoning_idxs, poisoning_idxs_path)
