@@ -36,13 +36,20 @@ class LC(Backdoor):
         if self.train:
             adv_model = ResNet(18, num_classes=num_classes) if 'cifar' in get_dataset_name(dataset) else resnet18(
                 num_classes=num_classes)
-            adv_model.load_state_dict(torch.load(backdoor_cfg['benign_model_path'], weights_only=True))
+            if osp.exists(backdoor_cfg['benign_model_path']):
+                adv_model.load_state_dict(torch.load(backdoor_cfg['benign_model_path'], weights_only=True))
 
             adv_dataset_dir = os.path.join(
                 'poisoned_data',
                 'lc',
                 f'adv_dataset-{get_dataset_name(dataset)}_patch_{self.poisoning_rate}_{self.poisoning_rate}_eps={backdoor_cfg["eps"]}',
             )
+
+            if osp.exists(osp.join(adv_dataset_dir, 'poisoned_set_indices.pt')):
+                self.poisoned_set_indices = torch.load(osp.join(adv_dataset_dir, 'poisoned_set_indices.pt'), weights_only=True)
+                self.poisoned_set = torch.zeros(len(dataset), dtype=torch.bool)
+                self.poisoned_set[self.poisoned_set_indices] = True
+
             _, self.poisoned_dataset = self._get_adv_dataset(
                 dataset,
                 adv_model=adv_model,
@@ -174,6 +181,7 @@ class LC(Backdoor):
         if not osp.exists(osp.join(adv_dataset_dir, 'whole_adv_dataset')) or not osp.exists(
                 osp.join(adv_dataset_dir, 'target_adv_dataset')):
             _generate_adv_dataset()
+            torch.save(poisoned_set, osp.join(adv_dataset_dir, 'poisoned_set_indices.pt'))
 
         whole_adv_dataset = DatasetFolder(
             root=osp.join(adv_dataset_dir, 'whole_adv_dataset'),
