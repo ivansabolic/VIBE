@@ -1,0 +1,6 @@
+defaults:
+  - resnet18_vmf
+  - _self_
+
+backbone:
+  ckpt_path: "solo_models/all4one/ua34hkmd/all4one-imagenet30-poisoned_badnets_0.1_0-ua34hkmd-ep=399.ckpt"

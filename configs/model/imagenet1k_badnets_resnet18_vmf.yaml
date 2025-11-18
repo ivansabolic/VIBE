@@ -1,0 +1,9 @@
+defaults:
+  - resnet18_vmf
+  - _self_
+
+backbone:
+  arch: resnet50
+  cifar: False
+  freeze_backbone: True
+  ckpt_path: "solo_models/all4one/11/all4one-imagenet-poisoned_badnets_0.01_0-11-ep=489.ckpt"

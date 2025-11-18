@@ -1,0 +1,7 @@
+name: blend
+target_label: 0
+poisoning_rate: 0.1
+cifar10_trigger_path: resources/hello_kitty.png
+cifar100_trigger_path: resources/hello_kitty.png
+imagenet_trigger_path: resources/imagenet_blend_trigger.png
+blend_ratio: 0.1

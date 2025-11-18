@@ -1,0 +1,3 @@
+name: ftrojan
+target_label: 0
+poisoning_rate: 0.1

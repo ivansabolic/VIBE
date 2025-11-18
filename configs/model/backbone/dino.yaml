@@ -1,0 +1,5 @@
+name: dino
+arch: giant
+freeze_backbone: True
+ckpt_path: ""
+cifar: False

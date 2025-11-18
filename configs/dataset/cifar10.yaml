@@ -1,0 +1,7 @@
+name: cifar-10
+cifar: True
+
+root: data
+
+kappa: 10
+nu: 10

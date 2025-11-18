@@ -1,0 +1,4 @@
+defaults:
+  - preprocessing: leiden
+  - log: standard
+  - metrics: accuracy

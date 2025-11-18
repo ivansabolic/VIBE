@@ -1,0 +1,5 @@
+name: uba-blend
+full_name: universal-backdoor-blend
+target_label: -1
+poisoning_rate: 0.006
+backdoor_poison_num: 8000

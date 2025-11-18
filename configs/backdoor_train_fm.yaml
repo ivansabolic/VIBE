@@ -1,0 +1,21 @@
+defaults:
+  - backdoor_train
+  - model/backbone/dino
+  - override hooks: standard_fm
+  - _self_
+
+model:
+  classifier: 
+    freeze_mu_y: True
+  
+training:
+  optimizer:
+    lr: 0.01
+
+  num_iterations: 15000
+  T: 500
+
+  eval_interval: 500
+
+dataloader:
+  batch_size: 1024

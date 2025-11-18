@@ -1,0 +1,7 @@
+name: imagenet-30
+cifar: False
+
+root: data/imagenet-30
+
+kappa: 10
+nu: 10

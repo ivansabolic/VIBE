@@ -1,0 +1,30 @@
+defaults:
+  - dataset: cifar10
+  - dataloader: standard
+  - backdoor: badnets
+  - model: resnet18_vmf
+  - hooks: standard
+  - training: sgd_none
+  - _self_
+
+trainer: x_conditioned_backdoor
+
+model:
+  classifier:
+    name: x_conditioned_von_mises_fisher
+    bias: True
+    mu_z_init: original_centroids
+    freeze_mu_z: False
+    mu_y_init: original_centroids
+    freeze_mu_y: False
+    num_classes: 10
+    embedding_dim: 512
+    normalize_inputs: True
+    normalize_h: False
+
+experiments_root: experiments
+add_info: ""
+cache_dir: cache
+
+model_path: ""
+

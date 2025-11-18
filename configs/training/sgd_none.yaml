@@ -1,0 +1,13 @@
+defaults:
+  - optimizer: sgd
+  - scheduler: none
+
+num_iterations: 30000
+T: 1000
+e_step_chunks: 4
+plot_data: False
+plot_eval_data: False
+
+logging_interval: 250
+save_interval: 1000
+eval_interval: 1000

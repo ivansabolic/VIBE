@@ -1,0 +1,7 @@
+name: imagenet1k
+cifar: False
+
+root: data/imagenet
+
+kappa: 20
+nu: 20

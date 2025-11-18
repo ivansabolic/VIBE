@@ -1,0 +1,22 @@
+defaults:
+  - dataset: cifar10
+  - dataloader: standard
+  - backdoor: badnets
+  - pseudo_label: sk
+  - model: ${dataset}_${backdoor}_resnet18_vmf
+  - training: sgd_none
+  - hooks: standard
+  - _self_
+
+model:
+  backbone:
+    cifar: ${dataset.cifar}
+  classifier:
+    kappa: ${dataset.kappa}
+    nu: ${dataset.nu}
+
+trainer: backdoor
+
+experiments_root: experiments
+add_info: ""
+cache_dir: cache

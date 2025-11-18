@@ -1,0 +1,6 @@
+defaults:
+  - backbone: resnet18
+  - classifier: von_mises_fisher
+
+prior_init: random
+c: 0.02

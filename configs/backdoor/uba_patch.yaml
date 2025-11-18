@@ -1,0 +1,5 @@
+name: uba-patch
+full_name: universal-backdoor
+target_label: -1
+poisoning_rate: 0.002
+backdoor_poison_num: 2000

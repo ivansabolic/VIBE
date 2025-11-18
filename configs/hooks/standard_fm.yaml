@@ -1,0 +1,4 @@
+defaults:
+  - preprocessing: none
+  - log: standard
+  - metrics: accuracy
