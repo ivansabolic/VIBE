@@ -1,6 +1,7 @@
 <div align="center">
 
-# **[Seal Your Backdoor with Variational Defense (ICCV 2025)](https://arxiv.org/abs/2503.08829)**
+# **[Seal Your Backdoor with Variational Defense](https://arxiv.org/abs/2503.08829)**
+### **[(ICCV 2025)](https://arxiv.org/abs/2503.08829)**
 
 </div>
 
